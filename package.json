@@ -1,0 +1,31 @@
+{
+  "name": "cypress-test-api",
+  "version": "1.0.0",
+  "description": "Cypress test API",
+  "scripts": {
+    "lint": "eslint cypress/**/*.js",
+    "lint-fix": "npm run lint -- --fix",
+    "cy:report": "cypress run -e allure=true",
+    "cy:open": "cypress open --e2e --browser chrome",
+    "cy:run": "cypress run --e2e --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raialmeida/cypress-test-api.git"
+  },
+  "author": "raialmeida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raialmeida/cypress-test-api/issues"
+  },
+  "homepage": "https://github.com/raialmeida/cypress-test-api#readme",
+  "devDependencies": {
+    "cypress": "12.11.0",
+    "eslint-plugin-cypress": "^2.13.3"
+  },
+  "dependencies": {
+    "@cypress/grep": "^3.1.5",
+    "@shelex/cypress-allure-plugin": "^2.38.3",
+    "joi": "^17.9.2"
+  }
+}
