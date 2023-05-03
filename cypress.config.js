@@ -7,6 +7,7 @@ module.exports = defineConfig({
       allureAttachRequests: true,
       allureClearSkippedTests: true
     },
+    baseUrl: 'https://serverest.dev/',
     video: false,
     specPattern: "cypress/**/*.spec*",
     fixturesFolder: false,
