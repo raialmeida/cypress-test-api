@@ -7,6 +7,8 @@ Informações básicas para realizar a instalação das tecnologias e configura�
 
 **Plataforma**: Click para consultar a plataforma [serverest](https://serverest.dev/)
 
+Acesse o planejamento: [clique aqui](https://gitmind.com/app/docs/mky4sjv3)
+
 ## Dependências utilizado com cypress no projeto.
 
 + [Allure Report](https://github.com/Shelex/cypress-allure-plugin)
