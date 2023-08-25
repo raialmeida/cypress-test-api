@@ -1,11 +1,13 @@
 # cypress-test-api
 Cypress test API ServeRest
 
-Projeto: Automação API
+Esse projeto tem o intuito de demostrar testes de API com cypress com uma estrutura simplificada.
+
+Projeto: Exemplo testes de API com Cypress
 
 Informações básicas para realizar a instalação das tecnologias e configurações para automatizar os testes. 
 
-**Plataforma**: Click para consultar a plataforma [serverest](https://serverest.dev/)
+**Plataforma**: Click para consultar a plataforma de exemplo [serverest](https://serverest.dev/)
 
 Acesse o planejamento: [clique aqui](https://gitmind.com/app/docs/mky4sjv3)
 
@@ -30,6 +32,8 @@ npm install
 ```
 
 ## Execução dos testes
+
+Obs: Antes da execução deve criar o usuário na rota /usuario e adicionar as informações no arquivo .env
 
 ### Para executar os testes pela interface do cypress:
 
