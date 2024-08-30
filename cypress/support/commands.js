@@ -13,6 +13,21 @@ Cypress.Commands.add('autenticar', () => {
     })
 })
 
+Cypress.Commands.add('cadastrarUsuario', () => {
+    cy.request({
+        log: false,
+        method: 'POST',
+        url: 'usuarios',
+        body: {
+            nome: "Fulano da Silva",
+            email: Cypress.env('email'),
+            password: Cypress.env('password'),
+            administrador: "true"
+        },
+        failOnStatusCode: false,
+    })
+})
+
 Cypress.Commands.add('excluirProduto', () => {
     cy.get('@idProduto', { log: false }).then((idProduto) => {
         cy.get('@token', { log: false }).then((token) => {
