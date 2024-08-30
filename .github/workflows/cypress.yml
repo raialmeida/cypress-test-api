@@ -27,6 +27,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Docker Compose
+        uses: ndeloof/install-compose-action@v0.0.1
+        
       - name: Run Cypress tests
         run: docker-compose run --rm cypress-api npx cypress run -e allure=true
 
