@@ -28,17 +28,20 @@ jobs:
         run: docker-compose build
 
       - name: Run Cypress tests
-        run: docker-compose run --rm cypress-api npx cypress run -e grepTags=@smoke,allure=true
+        run: docker-compose run --rm cypress-api npx cypress run -e allure=true
 
-      - name: Upload Allure Results
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.9
         if: always()
-        uses: actions/upload-artifact@v3
         with:
-          name: allure-results
-          path: ./allure-results
+          gh_pages: gh-pages
+          allure_history: allure-history
+          allure_results: build/allure-results
 
-      - name: Generate and Publish Allure Report
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v3
         if: always()
-        run: |
-          allure generate allure-results --clean -o allure-report
-          allure open allure-report
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
