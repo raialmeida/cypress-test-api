@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@cypress/grep": "^3.1.5",
-    "@shelex/cypress-allure-plugin": "^2.38.3",
+    "@shelex/cypress-allure-plugin": "^2.40.2",
     "dotenv": "^16.3.1",
     "joi": "^17.9.2"
   }
