@@ -8,21 +8,37 @@ on:
   workflow_dispatch:
 
 jobs:
-  buildx:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
+
       - name: Set up Docker Compose
         uses: ndeloof/install-compose-action@v0.0.1
 
       - name: Build Docker containers
         run: docker-compose build
 
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Run Cypress tests
         run: docker-compose run --rm cypress-api npx cypress run -e allure=true
+
+      - name: Create allure-results directory
+        run: mkdir -p ./allure-results
+
+  report:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Set up JDK
         uses: actions/setup-java@v3
@@ -31,7 +47,7 @@ jobs:
           java-version: 17
 
       - name: Load test report history
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: always()
         continue-on-error: true
         with:
@@ -44,7 +60,7 @@ jobs:
         with:
           gh_pages: gh-pages
           allure_history: allure-history
-          allure_results: allure-results
+          allure_results: ./allure-results
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
