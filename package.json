@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/raialmeida/cypress-test-api#readme",
   "devDependencies": {
-    "cypress": "^12.17.4",
+    "cypress": "12.14.0",
     "eslint-plugin-cypress": "^2.13.3"
   },
   "dependencies": {
     "@cypress/grep": "^3.1.5",
-    "@shelex/cypress-allure-plugin": "^2.38.3",
+    "@shelex/cypress-allure-plugin": "^2.40.2",
     "dotenv": "^16.3.1",
     "joi": "^17.9.2"
   }

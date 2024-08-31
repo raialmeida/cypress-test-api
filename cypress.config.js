@@ -5,8 +5,8 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer')
 module.exports = defineConfig({
   e2e: {
     env: {
-      email: process.env.EMAIL,
-      password: process.env.PASSWORD,
+      email: process.env.EMAIL || 'rateste@qa.com.br',
+      password: process.env.PASSWORD || '741852',
       allureAttachRequests: true,
       allureClearSkippedTests: true
     },
