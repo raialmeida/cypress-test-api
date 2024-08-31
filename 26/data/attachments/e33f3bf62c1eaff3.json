@@ -1,0 +1,9 @@
+{
+  "Connection": "keep-alive",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdGVzdGVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiI3NDE4NTIiLCJpYXQiOjE3MjUwNjY0NTksImV4cCI6MTcyNTA2NzA1OX0.JzPW7g2bODaq9M3Y1qoLNQPgQVJ86eD-Nyd7ymYgdn4",
+  "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.14.0 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "content-type": "application/json",
+  "content-length": 82
+}
