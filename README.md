@@ -11,6 +11,8 @@ Informações básicas para realizar a instalação das tecnologias e configura�
 
 Acesse o planejamento: [clique aqui](https://gitmind.com/app/docs/mky4sjv3)
 
+Acesse o relatório da última execução com Allure Report: [clique aqui](https://raialmeida.github.io/cypress-test-api/)
+
 ## Dependências utilizado com cypress no projeto.
 
 + [Allure Report](https://github.com/Shelex/cypress-allure-plugin)
