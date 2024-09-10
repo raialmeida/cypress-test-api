@@ -1,14 +1,13 @@
 require('dotenv').config()
 const { defineConfig } = require('cypress')
-const allureWriter = require('@shelex/cypress-allure-plugin/writer')
+const { allureCypress } = require("allure-cypress/reporter")
+const os = require('os');
 
 module.exports = defineConfig({
   e2e: {
     env: {
       email: process.env.EMAIL || 'rateste@qa.com.br',
       password: process.env.PASSWORD || '741852',
-      allureAttachRequests: true,
-      allureClearSkippedTests: true
     },
     baseUrl: 'https://serverest.dev/',
     video: false,
@@ -16,7 +15,15 @@ module.exports = defineConfig({
     fixturesFolder: false,
     setupNodeEvents(on, config) {
       require('@cypress/grep/src/plugin')(config)
-      allureWriter(on, config)
+      allureCypress(on, {
+        environmentInfo: {
+          OS: os.platform,
+          OsVersion: os.version,
+          Architecture: os.arch,
+          NodeVersion: process.version,
+          UrlAPI: config.baseUrl
+        }
+      })
       return config
     }
   }

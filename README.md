@@ -15,7 +15,7 @@ Acesse o relatório da última execução com Allure Report: [clique aqui](https
 
 ## Dependências utilizado com cypress no projeto.
 
-+ [Allure Report](https://github.com/Shelex/cypress-allure-plugin)
++ [Allure Report](https://allurereport.org/docs/cypress/)
 + [Joi](https://joi.dev/api/)
 + [Cypress ESLint Plugin](https://github.com/cypress-io/eslint-plugin-cypress)
 + [cypress/grep](https://github.com/cypress-io/cypress/tree/develop/npm/grep)
@@ -54,18 +54,15 @@ npm run cy:run
 npx cypress run -e grepTags=@tag
 ```
 
-### Para executar os testes com report Allure, execute no terminal:
+### Para executar o report Allure, execute no terminal:
 
-```
-npx cypress run -e allure=true
-```
 
 Após a execução dos testes, execute os comando abaixo para gerar e abrir o report:
 ```
-allure generate
+npx allure generate
 ```
 ```
-allure open
+npx allure open
 ```
  
 ## Regras de Organização

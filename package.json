@@ -5,9 +5,8 @@
   "scripts": {
     "lint": "eslint cypress/**/*.js",
     "lint-fix": "npm run lint -- --fix",
-    "cy:report": "cypress run -e allure=true",
-    "cy:open": "cypress open --e2e --browser chrome",
-    "cy:run": "cypress run --e2e --browser chrome"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -20,13 +19,15 @@
   },
   "homepage": "https://github.com/raialmeida/cypress-test-api#readme",
   "devDependencies": {
-    "cypress": "12.14.0",
-    "eslint-plugin-cypress": "^2.13.3"
+    "allure-commandline": "^2.30.0",
+    "allure-cypress": "^3.0.0-beta.12",
+    "eslint": "^9.10.0",
+    "eslint-plugin-cypress": "^3.5.0"
   },
   "dependencies": {
-    "@cypress/grep": "^3.1.5",
-    "@shelex/cypress-allure-plugin": "^2.40.2",
-    "dotenv": "^16.3.1",
-    "joi": "^17.9.2"
+    "@cypress/grep": "4.1.0",
+    "cypress": "13.14.2",
+    "dotenv": "16.4.5",
+    "joi": "17.13.3"
   }
 }

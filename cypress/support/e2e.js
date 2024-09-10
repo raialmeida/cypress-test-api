@@ -1,6 +1,6 @@
-import registerCypressGrep from '@cypress/grep'
+const registerCypressGrep = require('@cypress/grep')
 registerCypressGrep()
-import '@shelex/cypress-allure-plugin'
+import 'allure-cypress'
 import './commands'
 
 before(() => {
