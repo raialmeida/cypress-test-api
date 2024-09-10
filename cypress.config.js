@@ -21,7 +21,7 @@ module.exports = defineConfig({
           OsVersion: os.version,
           Architecture: os.arch,
           NodeVersion: process.version,
-          UrlAPI: config.baseUrl
+          UrlAPI: config.baseUrl,
         }
       })
       return config
