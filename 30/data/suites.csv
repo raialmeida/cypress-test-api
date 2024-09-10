@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Sep 10 21:06:47 GMT 2024","Tue Sep 10 21:06:47 GMT 2024","73","POST - Validar endpoint produtos","","","","","Validar schema response",""
+"passed","Tue Sep 10 21:06:47 GMT 2024","Tue Sep 10 21:06:47 GMT 2024","165","POST - Validar endpoint produtos","","","","","Validar criação de produtos com sucesso",""
