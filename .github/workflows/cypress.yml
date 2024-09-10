@@ -22,7 +22,7 @@ jobs:
         run: docker-compose build
 
       - name: Run Cypress tests
-        run: docker-compose run --rm cypress-api npx cypress run -e allure=true
+        run: docker-compose run --rm cypress-api npx cypress run
 
       - name: Set up JDK
         uses: actions/setup-java@v3

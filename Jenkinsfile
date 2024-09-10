@@ -21,7 +21,7 @@ pipeline {
         stage('Test and Report') {
             steps {
                 echo 'running tests'
-                sh 'docker-compose run --rm cypress-api npx cypress run -e grepTags=@smoke,allure=true'
+                sh 'docker-compose run --rm cypress-api npx cypress run'
             }
              
             post {
