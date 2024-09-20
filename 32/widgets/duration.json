@@ -1,0 +1,1 @@
+[{"uid":"538a9365fe5b2041","name":"Validar criação de produtos com sucesso","time":{"start":1726861199787,"stop":1726861200321,"duration":534},"status":"failed","severity":"normal"},{"uid":"d38893d0f32a3da1","name":"Validar schema response","time":{"start":1726861200466,"stop":1726861200558,"duration":92},"status":"skipped","severity":"normal"}]
