@@ -47,6 +47,11 @@ npm run cy:open
 ```
 npm run cy:run
 ```
+### Para executar os testes de acordo com o ambiente, execute no terminal: 
+
+```
+npx cypress run -e environment=dev
+```
 
 ### Para executar os testes por tags, execute no terminal:
 
